@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxury Black & Gold Theme */
+    --background: 0 0% 5%;
+    --foreground: 40 35% 90%;
+    --card: 0 0% 7%;
+    --card-foreground: 40 35% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 35% 90%;
+    --primary: 43 74% 50%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 35% 90%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 40 15% 55%;
+    --accent: 43 62% 45%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 43 20% 18%;
+    --input: 43 20% 18%;
+    --ring: 43 74% 50%;
+    --chart-1: 43 74% 50%;
+    --chart-2: 35 60% 45%;
+    --chart-3: 50 80% 65%;
+    --chart-4: 25 50% 40%;
+    --chart-5: 45 40% 35%;
+    --radius: 0.75rem;
+    --font-heading: 'Playfair Display', ui-serif, Georgia, serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 40 30% 65%;
+    --sidebar-primary: 43 74% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 7%;
+    --sidebar-accent-foreground: 40 30% 85%;
+    --sidebar-border: 43 15% 12%;
+    --sidebar-ring: 43 74% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 40 35% 90%;
+    --card: 0 0% 7%;
+    --card-foreground: 40 35% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 35% 90%;
+    --primary: 43 74% 50%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 35% 90%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 40 15% 55%;
+    --accent: 43 62% 45%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 43 20% 18%;
+    --input: 43 20% 18%;
+    --ring: 43 74% 50%;
+    --chart-1: 43 74% 50%;
+    --chart-2: 35 60% 45%;
+    --chart-3: 50 80% 65%;
+    --chart-4: 25 50% 40%;
+    --chart-5: 45 40% 35%;
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 40 30% 65%;
+    --sidebar-primary: 43 74% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 7%;
+    --sidebar-accent-foreground: 40 30% 85%;
+    --sidebar-border: 43 15% 12%;
+    --sidebar-ring: 43 74% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(43 74% 50% / 0.06), transparent),
+      radial-gradient(ellipse 60% 50% at 80% 100%, hsl(35 60% 45% / 0.04), transparent);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(0 0% 5%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(43 25% 20%);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(43 30% 28%);
+  }
+
+  ::selection {
+    background: hsl(43 74% 50% / 0.3);
+    color: hsl(40 35% 95%);
+  }
+}
+
+@layer utilities {
+  .luxury-card {
+    background: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
+    border: 1px solid hsl(43 25% 18% / 0.6);
+    box-shadow: 0 4px 24px hsl(0 0% 0% / 0.4), inset 0 1px 0 hsl(43 74% 50% / 0.06);
+  }
+  .gold-glow {
+    box-shadow: 0 0 30px hsl(43 74% 50% / 0.12);
+  }
+  .gold-text {
+    background: linear-gradient(135deg, hsl(50 85% 75%), hsl(43 74% 50%), hsl(35 60% 40%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43 74% 50%), hsl(35 60% 45%));
+  }
+  .gold-border {
+    border: 1px solid hsl(43 74% 50% / 0.3);
+  }
+  .glass-dark {
+    background: hsl(0 0% 8% / 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(43 25% 18% / 0.4);
+  }
+  .sunset-gradient {
+    background: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 8%) 50%, hsl(43 30% 12%) 100%);
+  }
+  .sunset-card-gradient {
+    background: linear-gradient(135deg, hsl(43 74% 50%) 0%, hsl(35 60% 45%) 100%);
+  }
+  .shiny-green {
+    background: linear-gradient(135deg, hsl(140 90% 62%), hsl(150 95% 45%), hsl(120 82% 36%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .robotic-border {
+    border: 1px solid hsl(43 25% 18%);
+    box-shadow: 0 0 0 1px hsl(43 74% 50% / 0.05);
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+  .luxury-card, .glass-dark {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+  .gold-text {
+    -webkit-text-fill-color: black !important;
+  }
+}

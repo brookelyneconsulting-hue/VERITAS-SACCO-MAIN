@@ -1,0 +1,13 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "VITE_SUPABASE_ANON_KEY",
+      "description": "Supabase publishable/anon key for the project at https://znwkhhznjdzgbdudmkvf.supabase.co (Project Settings → API → anon public key)",
+      "requiredAtBoot": true,
+      "generatedForDevelopment": true
+    }
+  ]
+}

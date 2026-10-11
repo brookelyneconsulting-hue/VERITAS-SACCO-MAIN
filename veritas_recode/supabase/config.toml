@@ -1,0 +1,25 @@
+project_id = "znwkhhznjdzgbdudmkvf"
+
+[functions.member-login]
+verify_jwt = false
+
+[functions.public-institutions]
+verify_jwt = false
+
+[functions.member-lookup]
+verify_jwt = true
+
+[functions.enroll-member]
+verify_jwt = true
+
+[functions.send-email]
+verify_jwt = true
+
+[functions.invite-user]
+verify_jwt = true
+
+[functions.invoke-llm]
+verify_jwt = true
+
+[functions.extract-uploaded-file]
+verify_jwt = true
